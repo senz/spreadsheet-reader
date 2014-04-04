@@ -877,9 +877,9 @@
 						// Scaling
 						$Value = $Value / $Format['Scale'];
 
-						if ($Format['MinWidth'] && $Format['Decimals'])
+						if (!empty($Format['MinWidth']) && !empty($Format['Decimals']))
 						{
-							if ($Format['Thousands'])
+							if (!empty($Format['Thousands']))
 							{
 								$Value = number_format($Value, $Format['Precision'],
 									self::$DecimalSeparator, self::$ThousandSeparator);
